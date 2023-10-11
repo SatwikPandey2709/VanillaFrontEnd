@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} - Explore{% endblock %}
+
+<style>
+  @media (max-width: 768px) {
+      .hide-sidebar {
+          display: none;
+      }
+      .rowmargin {
+          margin-top: 200px;
+      }
+  }
+</style>
+
+{% block content %}
+  <div class="col-md-6">
+    <h2 class="mx-2 mt-2 rowmargin" style="color: white;">Explore</h2>
+    <img src="{% static 'Group 103.jpg' %}" alt="post1" style="width: 100%;">
+    <img src="{% static 'Group 102.jpg' %}" alt="post2" style="width: 100%;" class="my-2">
+  </div>
+  <div class="col-md-3 hide-sidebar">
+    <h2 class="mx-2 mt-2" style="color: white;">Filters</h2>
+    <img src="{% static 'filter.jpg' %}" alt="explore">
+    <h2 class="mx-2 mt-2" style="color: white;">Categories</h2>
+    <img src="{% static 'categories.jpg' %}" alt="explore">
+  </div>
+{% endblock %}

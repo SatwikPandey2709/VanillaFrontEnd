@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Profile{% endblock %}
+<style>
+    @media (max-width: 768px) {
+      .change {
+        margin-top: 300px;
+      }
+      }
+</style>
+
+{% block content %}
+<div class="col-md-9 mt-3" style="color: white;">
+
+<div class="row" style="width: 100%;">
+
+  <div class="col-md-4" style="padding: 15px;">
+    <div style="text-align: left; margin-left: 33px;">
+      <h3>Messages</h3>
+    </div>
+    <div style="text-align: center;">
+      <img style="width: 80%;" src="{% static 'messages.jpg' %}" alt="messages">
+    </div>
+  </div>
+  
+  <div class="col-md-8" style="padding: 15px; margin-top: 40px;">
+    <div style="text-align: center;">
+      <img style="width: 100%;" src="{% static 'chat.jpg' %}" alt="chat">
+    </div>
+
+</div>
+
+</div>
+
+
+</div>
+{% endblock %}

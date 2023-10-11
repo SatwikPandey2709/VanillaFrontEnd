@@ -7,46 +7,110 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(41, 38, 38);
+            color: white;
+        }
         .btn-pink {
             background-color: rgb(163, 41, 62);
             color: white;
             width: 100%;
+            border-style: hidden;
+            border-radius: 20px;
         }
-        .login-col{
-            width: 30%;
-            max-height: 100%;
+        .login-col {
+            width: 4fr;
+            height: 100%;
+            margin: 0;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
         }
         .img-col {
-            width: 70%;
-            max-height: 100%;
+            width: 8fr;
+            height: 100vh;
+            object-position: right;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .form-control{
+            border-radius: 20px;
+        }
+        .form-group label {
+            text-align: left; /* Align text to the left */
+            display: block; /* Make labels block-level elements to control their width */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(57, 54, 54);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 img-col">
-                <img src="{% static 'toecam/static/default.jpeg' %}" alt="LoginImage">
+            <div class="col-md-8 img-col"> <!-- Adjusted col-md-* class -->
+                <img src="{% static 'default.jpg' %}" alt="LoginImage" class="img-fluid img">
             </div>
 
-            <div class="col-md-6 mt-5 login-col">
-                <h2>Welcome Back!</h2>
-                <h6>Happy to see you again</h6>
+            <div class="col-md-4 mt-5 login-col"> <!-- Adjusted col-md-* class -->
+                <h2 class="mt-5 mb-0">Welcome Back!</h2>
+                <h6 class="mt-0">Happy to see you again</h6>
                 <form method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="username">Email</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <label for="username" class="mt-4 px-2">Email</label>
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="Enter Email">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <label for="password" class="mt-3 px-2">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="Enter Password">
                     </div>
-                    <button type="submit" class="btn btn-primary my-3 btn-pink">Login</button>
+                    <a style="margin-left: 281px; font-size: 14px; color: white; background-color: rgb(41, 38, 38); border-style: hidden;" class="btn btn-primary" href="/toecam/reset-password/" role="button">Forgot Password?</a>
+                    <button type="submit" class="btn btn-primary btn-pink mt-2 mb-4">Login</button>
                 </form>
+                <!-- Added "OR" and buttons -->
+                <div style="align-items: center;">
+                    <p><b>OR</b></p>
+                    <button class="btn btn-light btn-pink my-2">Continue with Google</button>
+                    <button class="btn btn-light btn-pink my-2">Continue with Apple ID</button>
+                    <p class="mt-3"><a href="/toecam/signup/">Don't have an account?</a></p>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="text-white text-center py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#">About Us</a> |
+                    <a href="#">How It Works</a> |
+                    <a href="#">Contact Us</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Cookie Policy</a> |
+                    <a href="#">DCMA Take Down Policy</a> |
+                    <a href="#">Anti-slavery and Anti-trafficking</a> |
+                    <span>&copy; 2023 Only Toes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

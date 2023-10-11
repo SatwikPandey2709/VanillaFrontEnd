@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} - Home{% endblock %}
+
+<style>
+  @media (max-width: 768px) {
+      .hide-sidebar {
+          display: none;
+      }
+  }
+</style>
+
+{% block content %}
+  <div class="col-md-6">
+    <h2 class="mx-2 mt-2" style="color: white;">Home</h2>
+    <img src="{% static 'Group 101.jpg' %}" alt="post1" style="width: 100%;">
+    <img src="{% static 'Group 102.jpg' %}" alt="post2" style="width: 100%;" class="my-2">
+  </div>
+  <div class="col-md-3 hide-sidebar">
+    <h2 class="mx-2 mt-2" style="color: white;">Explore</h2>
+    <img src="{% static 'explore.jpg' %}" alt="explore">
+  </div>
+{% endblock %}
