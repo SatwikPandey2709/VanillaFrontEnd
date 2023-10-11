@@ -17,4 +17,7 @@ urlpatterns = [
     path('posts/', views.posts, name="posts"),
     path('followers/', views.followers, name="followers"),
     path('following/', views.following, name="following"),
+    path('bookmarks/', views.bookmarks, name="bookmarks"),
+    path('purchased/', views.purchased, name="purchased"),
+    path('settings/', views.settings, name="settings"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

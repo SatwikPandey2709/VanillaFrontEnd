@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Bookmarks{% endblock %}
+{% block content %}
+<div class="col-md-9 mt-3" style="color: white;">
+    <div class="row"">
+        <div class="col my-3"><h3>Profile Settings</h3></div>
+        <div class="col my-3"><form role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        </div>
+    </div>
+  <div class="row">
+    <div class="col"><img class="mt-4" style="width: 100%; height: 90%;" src="{% static 'my profile.jpg' %}" alt="post1"></div>
+    <div class="col"><img class="mt-4" style="width: 100%; height: 90%;"  src="{% static 'wallet.jpg' %}" alt="post2"></div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-3"><h3>Subscriptions</h3></div>
+  </div>
+  <div class="row">
+    <div class="col"><img class="mt-4" style="width: 100%;" src="{% static 'setup sub.jpg' %}" alt="post5"></div>
+</div>
+<div class="row">
+  <div class="col"><img class="mt-4" style="width: 100%; height: 90%;" src="{% static 'sec1.jpg' %}" alt="post1"></div>
+  <div class="col"><img class="mt-4" style="width: 100%; height: 90%;" src="{% static 'sec2.jpg' %}" alt="post2"></div>
+  <div class="col my-4" style="background-color: rgb(53, 46, 46); margin: 10px;">
+    <div class="row mt-4 mx-0"><h4>Security</h4></div>
+    <div class="row mt-3" style="margin-left: 3px;"><h7>Two factor authentication <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+    </svg>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label></h7></div>
+    <br>
+    <div class="row"><p class="mb-0 mt-2">Old Password</p><div class="col"><form role="search"><input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></form></div></div>
+    <div class="row"><p class="mb-0 mt-2">New Password</p><div class="col"><form role="search"><input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></form></div></div>
+    <div class="row"><p class="mb-0 mt-2">Confirm New Password</p><div class="col"><form role="search"><input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></form></div></div>
+    <div class="row mt-3 mx-5"><button style="border-radius: 20px;" type="button" class="btn btn-danger">Save New Password</button></div>
+  </div>
+  <div class="row">
+    <div class="col"><img class="mt-2" style="width: 102.5%;" src="{% static 'blocked.jpg' %}" alt="post5"></div>
+</div>
+<div class="row mt-4">
+  <div class="col-3"><h3>Payments</h3></div>
+</div>
+<div class="row">
+  <div class="col"><img class="my-2" style="width: 102.5%;" src="{% static 'payments.jpg' %}" alt="post5"></div>
+</div>
+</div>
+{% endblock %}

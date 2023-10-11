@@ -35,3 +35,12 @@ def followers(request):
 
 def following(request):
     return render(request, 'following.html')
+
+def bookmarks(request):
+    return render(request, 'bookmarks.html')
+
+def purchased(request):
+    return render(request, 'purchased.html')
+
+def settings(request):
+    return render(request, 'settings.html')

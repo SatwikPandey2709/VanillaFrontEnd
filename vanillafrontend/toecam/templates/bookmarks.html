@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Bookmarks{% endblock %}
+<style>
+  .imagbk{
+    padding: 0;
+    width: 60%;
+  }
+  .colhere{
+    margin-right: 20px; 
+  }
+</style>
+{% block content %}
+<div class="col-md-9 mt-3" style="color: white;">
+    <div class="row" style=" background-color: rgb(53, 46, 46); width: 91%;">
+        <div class="col my-3"><h3>Dashboard</h3></div>
+        <div class="col my-3"><form role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        </div>
+    </div>
+  <div class="row">
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p1.jpg' %}" alt="post1"></div>
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p2.jpg' %}" alt="post2"></div>
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p3.jpg' %}" alt="post3"></div>
+  </div>
+  <div class="row">
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p4.jpg' %}" alt="post4"></div>
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p5.jpg' %}" alt="post5"></div>
+    <div style="padding: 0; width: 340px; margin: 2px;" class="col-3"><img class="imagbk mt-4" src="{% static 'p6.jpg' %}" alt="post6"></div>
+</div>
+{% endblock %}
